@@ -18,7 +18,7 @@
     <h2>Mechanics</h2>
 
     <ul>
-        <li>Player A and Player B randomly “throw” either rock, paper or scissors.
+        <li>Player A and Player B randomly “throw” either rock, paper, or scissors.
         <li>A tie is declared if both players "throw" the same move.
         <li>Otherwise: rock beats scissors, scissors beats paper, and paper beats rock.</li>
     </ul>

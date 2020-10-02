@@ -1,9 +1,8 @@
-/*# Project 1 Stylesheet*/
+/*# E2 Project 1 Stylesheet*/
 
 body {
     font-family: 'Gloria Hallelujah', cursive;
-    margin: 2em;
-    padding-left: 10em;
+    margin-left: 10em;
     font-size: 1.5em;
 }
 
@@ -14,9 +13,8 @@ h1, h2 {
 /*Formatting Font Awesome icons*/
 
 .fas, .fab {
-    padding: .5em;
     font-size: 3em;
-    padding: 1 em;
+    padding-right: .5em;
     color: teal;
 }
 

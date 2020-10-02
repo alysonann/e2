@@ -1,7 +1,7 @@
 <?php
 #Rock, Paper, Scissors Game
 
-//Player A and Player B randomly “throw” either Rock, Paper or Scissors.
+//Player A and Player B randomly “throw” either rock, paper or scissors.
 $choices = ['rock','paper','scissors'];
 $playerA = $choices[rand(0, 2)];
 $playerB = $choices[rand(0, 2)];
