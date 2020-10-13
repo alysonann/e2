@@ -1,0 +1,59 @@
+/*# E2 Project 2 Stylesheet*/
+
+body {
+    font-family: 'Indie Flower', cursive;
+    margin-left: 10em;
+    font-size: 1.5em;
+}
+
+h1, h2 {
+    color: #710193;
+    font-family: 'Paytone One', sans-serif;
+}
+
+/*Formatting Font Awesome icons*/
+
+.fas, .fab {
+    font-size: 2em;
+    padding: 0 .5em 0 .5em;
+    color: #17A589;
+}
+
+form {
+    margin-left: 1em;
+    font-size: 2em;
+}
+
+/*Formatting results ul*/
+
+ul.results {
+    font-size: 1.5em;
+    padding-left: 4em;
+}
+
+/*Formatting button, from CSS Button Generator. See READ.md*/
+
+.myButton {
+    font-family: 'Paytone One', sans-serif;
+    background-color: #aa32d9;
+    font-weight: bold;
+    border-radius: 28px;
+    border: 1px solid #4e6096;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 23px;
+    padding: 16px 31px;
+    margin: 1em 1em 1em 6em;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #283966;
+}
+
+.myButton:hover {
+    background-color: #3dbdbd;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
