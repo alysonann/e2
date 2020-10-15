@@ -1,7 +1,6 @@
 /*# E2 Project 2 Stylesheet*/
 
 body {
-    font-family: 'Indie Flower', cursive;
     margin-left: 10em;
     font-size: 1.5em;
 }
@@ -9,26 +8,78 @@ body {
 h1, h2 {
     color: #710193;
     font-family: 'Paytone One', sans-serif;
+    margin: 0;
+}
+
+li, div {
+    font-family: 'Indie Flower', cursive;
 }
 
 /*Formatting Font Awesome icons*/
 
 .fas, .fab {
-    font-size: 2em;
-    padding: 0 .5em 0 .5em;
-    color: #17A589;
+    font-size: 1.3em;
+    padding: .5em;
+}
+
+.fa-hand-rock {
+    color: #008080;
+}
+
+.fa-hand-paper {
+    color: #B91CA8;
+}
+
+.fa-hand-scissors {
+    color: #0083e2;
+}
+
+input[type="radio"] {
+    margin-left: 3em;
+}
+
+input[type="text"] {
+    margin: .6em;
+    padding: .6em;
+    height: 30px;
+    width: 150px;
+    font-size: .5em;
+    font-family: 'Indie Flower', cursive;
+    border-radius: 1em;
+    border: 0;
+}
+
+div.choices {
+    display: block;
+}
+
+#instructions {
+    margin-left: 1em;
+    color: #ef0079;
+    font-weight: bold;
+    font-family: 'Paytone One', sans-serif;
+    float: left;
+}
+
+.results {
+    float: left;
+    padding: 1em;
+    line-height: 3em;
 }
 
 form {
-    margin-left: 1em;
-    font-size: 2em;
+    padding: 1em;
+    font-size: 1.5em;
+    color: #1c53e3;
+    background-color: #dddddd;
+    border-radius: 28px;
+    float: left;
 }
 
 /*Formatting results ul*/
 
-ul.results {
-    font-size: 1.5em;
-    padding-left: 4em;
+ul {
+    margin: 0;
 }
 
 /*Formatting button, from CSS Button Generator. See READ.md*/
@@ -39,14 +90,14 @@ ul.results {
     font-weight: bold;
     border-radius: 28px;
     border: 1px solid #4e6096;
-    display: inline-block;
     cursor: pointer;
     color: #ffffff;
     font-size: 23px;
     padding: 16px 31px;
-    margin: 1em 1em 1em 6em;
+    margin: 0em 0em 0em 3em;
     text-decoration: none;
     text-shadow: 0px 1px 0px #283966;
+    text-align: center;
 }
 
 .myButton:hover {

@@ -3,28 +3,31 @@
 session_start();
 
 $player = $_GET["player"];
-
+$playerName = $_GET["playerName"];
 $choices = ['rock','paper','scissors'];
 $computer = $choices[rand(0, 2)];
-$result = "";
-
+//Booleans to communicate results to view file so messages can be customized there
+$isTie = null;
+$playerWins = null;
 
 if ($player == $computer) {
-    $result = "It is a tie!";
+    $isTie = true;
 } elseif (($player =='rock' and $computer == 'scissors') ||
          ($player == 'paper' and $computer == 'rock') ||
           ($player == 'scissors' and $computer == 'paper')) {
-    $result = "You win!";
+    $playerWins = true;
 } elseif (($player== 'rock' and $computer =='paper') ||
            ($player == 'paper' and $computer == 'scissors')||
            ($player == 'scissors' and $computer == 'rock')) {
-    $result = "The computer wins!";
+    $playerWins = false;
 }
 
+
 $_SESSION["gamePlay"] = [
+    "playerName" => $playerName,
     "player" => $player,
     "computer" => $computer,
-    "result" => $result,
+    "isTie" => $isTie,
+    "playerWins" => $playerWins
 ];
-var_dump("gamePlay");
 header("Location: index.php");
