@@ -31,7 +31,7 @@ li, div {
 }
 
 .fa-hand-scissors {
-    color: #0083e2;
+    color: #00b0ed;
 }
 
 input[type="radio"] {
@@ -39,7 +39,7 @@ input[type="radio"] {
 }
 
 input[type="text"] {
-    margin: .6em;
+    margin: 0 0 0 .6em;
     padding: .6em;
     height: 30px;
     width: 150px;

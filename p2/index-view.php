@@ -20,7 +20,7 @@
         <i class="fas fa-hand-scissors"></i>
     </h2>
     <ul>
-        <li>You pick your "throw": rock, paper, or scissors. Also enter your name if you wish!</li>
+        <li>Pick your "throw": rock, paper, or scissors. Also, enter your name if you wish!</li>
         <li>The computer will choose a "throw" at the same time, and we'll see who wins!</li>
         <li>If you throw the same thing, it's a tie!</li>
         <li>Otherwise: rock beats scissors, scissors beats paper, and paper beats rock.</li>
@@ -29,21 +29,23 @@
     <form method="GET" action="process.php">
         <div class="inputs"><label for="playerName">Player name:</label><input type="text" name="playerName"
                 id="playerName" value="Player"></div>
-        <div class="inputs"> <input type="radio" name="player" value="rock" id="rock" checked><label for="rock"><i
+        <div class="inputs"> <input type="radio" name="player" value="rock" id="rock" required><label for="rock"><i
                     class="fas fa-hand-rock"></i>rock</label>
         </div>
-        <div class="inputs"><input type="radio" name="player" value="paper" id="paper"><label for="paper"><i
+        <div class="inputs"><input type="radio" name="player" value="paper" id="paper" required><label for="paper"><i
                     class="fas fa-hand-paper"></i>paper</label></div>
-        <div class="inputs"><input type="radio" name="player" value="scissors" id="scissors"><label for="scissors"><i
-                    class="fas fa-hand-scissors"></i>scissors</label></div>
+        <div class="inputs"><input type="radio" name="player" value="scissors" id="scissors" required><label
+                for="scissors"><i class="fas fa-hand-scissors"></i>scissors</label></div>
         <button class="myButton" type="submit">THROW</button>
     </form>
+    <!--Only show results if game has been played!-->
     <?php if ($haveResults) {?>
     <div class="results">
         <h2>Results</h2>
         <ul>
             <li><?php echo $playerName; ?> threw <?php echo $player; ?>.</li>
             <li>The computer threw <?php echo $computer; ?>.</li>
+            <!--Results are communicated using booleans. Can customize results messages here.-->
             <?php if ($isTie) {?>
             <li>It's a tie!</li>
             <?php } elseif ($playerWins) {?>
