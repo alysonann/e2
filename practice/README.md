@@ -1,5 +1,5 @@
 #Practice project
 
-Deomonstrate the basic Git workflow
+Demonstrate the basic Git workflow
 
 By Alyson Lynch
