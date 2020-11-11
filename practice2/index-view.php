@@ -26,6 +26,10 @@
         </li>
         <li>The winner is <?php echo $winner; ?>
         </li>
+        <?php $a = true;
+$b = 8; ?>
+        <li><?= ($a and $b > 10) ? 'x' : 'y' ?>
+        </li>
     </ul>
 
 </body>
