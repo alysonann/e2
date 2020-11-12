@@ -6,9 +6,10 @@ All Products
 @endsection
 
 @section('content')
-<h2>Product 99 not found.</h2>
+<h2>Product {{$id}} not found.</h2>
+
 <div>Uh oh—we were not able to find the product you were looking for.</div>
-<a href='{{ $app->config('app.url') }}'>Check out our other products . . . </a>
+<a href='/products'>Check out our other products...</a>
 
 
 </div>

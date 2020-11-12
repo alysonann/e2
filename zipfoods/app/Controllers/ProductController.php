@@ -30,7 +30,10 @@ class ProductController extends Controller
 
         if (is_null($product)) {
             //return $this->app->view("errors.404");
-            return $this->app->view("products.missing");
+            return $this->app->view(
+                "products.missing",
+                ['id'=>$id]
+            );
         }
 
         return $this->app->view("products.show", [
