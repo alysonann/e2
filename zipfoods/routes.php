@@ -8,5 +8,9 @@ return [
     '/contact' => ['AppController', 'contact'],
     '/products' => ['ProductController', 'index'],
     '/product' => ['ProductController', 'show'],
+    '/products/save-review' => ['ProductController','saveReview'],
     '/about' => ['ProductController', 'about'],
+    '/practice'=>['AppController','practice'],
+    '/practice2'=>['AppController','practice2']
+
 ];
