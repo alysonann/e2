@@ -1,0 +1,15 @@
+ #logo {
+     width: 300px;
+ }
+
+ .won {
+     color: green;
+ }
+
+ .lost {
+     color: red;
+ }
+
+ h2 {
+     color: purple;
+ }
