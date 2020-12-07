@@ -18,58 +18,73 @@ class AppController extends Controller
     public function history()
     {
         $rounds = $this->app->db()->all('rounds');
+        dump($rounds);
 
-       
         return $this->app->view('history', [
             'rounds' => $rounds
-
         ]);
     }
-
     public function round()
     {
         $id = $this->app->param('id');
-        dump($id);
-
         $round = $this->app->db()->findById('rounds', $id);
-        //dump($round);
         return $this->app->view('round', [
-            'round' => $round
+            'round'=>$round
         ]);
     }
 
     public function play()
     {
         $this->app->validate([
-            'move' => 'required'
+            'player'=>'required'
         ]);
-        $move = $this->app->input('move');
+
+        $playerMove = $this->app->input('player');
+        $playerName = $this->app->input('playerName');
+        //return $this->app->inputAll();
+        //dump($playerMove);
+        //dump($playerName);
+
+
+        $choices = ['rock','paper','scissors'];
+        $computerMove = $choices[rand(0, 2)];
+        //dump($computerMove);
+
+        if ($computerMove == $playerMove) {
+            $result = "tie"; # The game is a tie; no winner
+        } elseif (($playerMove =='rock' and $computerMove == 'scissors') ||
+                    ($playerMove == 'paper' and $computerMove == 'rock') ||
+                    ($playerMove == 'scissors' and $computerMove == 'paper')) {
+            $result = "win"; # The player wins
+        } elseif (($playerMove== 'rock' and $computerMove =='paper') ||
+                    ($playerMove == 'paper' and $computerMove == 'scissors')||
+                    ($playerMove == 'scissors' and $computerMove == 'rock')) {
+            $result = "loss"; # The player loses
+        }
+
         # Save results to the database
-        $moves = ['heads','tails'];
-        $flip = $moves[rand(0, 1)];
-        $win = $move == $flip;
-        // dump($choice);
-        // dump($flip);
-        // dump($winner);
-
+        # Set up a round
         $data = [
-            'move' => $move,
-            'win'  => $win ? 1 : 0, # Convert the win value of "true" or "false" to the numberic value of 1 or 0
-            'time'=> date('Y-m-d H:i:s')
-        ];
-
+                'player_move' => $playerMove,
+                'computer_move' => $computerMove,
+                'result' => $result,
+                'time' =>date('Y-m-d H:i:s'),
+                'name' => $playerName
+            ];
+        //  dump($round);
+        # Insert the round
         $this->app->db()->insert('rounds', $data);
 
         # Redirect the user back to the home page with the form to play again
-
         $this->app->redirect('/', [
-                'results'=> [
-                'move' => $move,
-                'win' => $win,
-                'flip' => $flip
+            'results' =>[
+                'player_move'=>$playerMove,
+                'computer_move' => $computerMove,
+                'result' => $result,
+                'name' => $playerName
+
             ]
-            
         ]);
-        //dump($data);
+        dump('results');
     }
 }

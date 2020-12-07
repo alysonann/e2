@@ -8,4 +8,5 @@ return [
     '/history'=> ['AppController','history'],
     '/round'=>['AppController','round'],
     '/play'=>['AppController','play'],
+
 ];

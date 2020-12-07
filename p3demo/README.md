@@ -1,6 +1,5 @@
 
-# Project 3: Heads or Tails Demo 
-# My own copy from Lecture Videos
+# Project 3: Heads or Tails Demo from Lecture Videos
 + By: *Alyson Lynch*
 + Production URL: <http://e2p3.alysonann.xyz>
 

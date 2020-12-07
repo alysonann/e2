@@ -15,15 +15,16 @@
 </head>
 <body>
 
-    <header>
-        <h1><img id='logo' src='/images/rps-logo.png' alt='Rock, Paper, Scissors Logo'></h2>
-    </header>
+<header>
+    <img id='logo' src='/images/hes-logo.png' alt='Harvard Extension School Logo'>
+    <h1>{{ $app->config('app.name') }}</h1>
+</header>
 
-    <main>
-        @yield('content')
-    </main>
+<main>
+    @yield('content')
+</main>
 
-    @yield('body')
+@yield('body')
 
 </body>
 </html>

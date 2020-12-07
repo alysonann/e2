@@ -7,9 +7,11 @@ Game History
 @section('content')
 <h2>Game History</h2>
 
-<ul>@foreach ($rounds as $round)
-    <li><a href='/round?id={{$round['id']}}'>{{$round['time']}}</li>
+<ul>
+    @foreach($rounds as $round)
+    <li><a href='/round?id={{ $round['id'] }}'>Round {{ $round['id'] }}: {{$round['time']}}</li>
     @endforeach
-</ul>
+    <ul>
+        <p><a href="/">Play again...</a></p>
 
-@endsection
+        @endsection
