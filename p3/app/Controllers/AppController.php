@@ -9,7 +9,6 @@ class AppController extends Controller
     public function index()
     {
         $results = $this->app->old('results');
-        dump($results);
         return $this->app->view('index', [
             'results' => $results
         ]);
@@ -18,7 +17,6 @@ class AppController extends Controller
     public function history()
     {
         $rounds = $this->app->db()->all('rounds');
-        dump($rounds);
 
         return $this->app->view('history', [
             'rounds' => $rounds
@@ -41,14 +39,10 @@ class AppController extends Controller
 
         $playerMove = $this->app->input('player');
         $playerName = $this->app->input('playerName');
-        //return $this->app->inputAll();
-        //dump($playerMove);
-        //dump($playerName);
 
 
         $choices = ['rock','paper','scissors'];
         $computerMove = $choices[rand(0, 2)];
-        //dump($computerMove);
 
         if ($computerMove == $playerMove) {
             $result = "tie"; # The game is a tie; no winner
@@ -71,7 +65,6 @@ class AppController extends Controller
                 'time' =>date('Y-m-d H:i:s'),
                 'name' => $playerName
             ];
-        //  dump($round);
         # Insert the round
         $this->app->db()->insert('rounds', $data);
 
@@ -85,6 +78,5 @@ class AppController extends Controller
 
             ]
         ]);
-        dump('results');
     }
 }

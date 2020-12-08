@@ -7,6 +7,20 @@
     <meta charset='utf-8'>
 
     <link rel='shortcut icon' href='/favicon.ico'>
+    <script src="https://kit.fontawesome.com/9779d43f9a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Paytone+One&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+
+
+
+
 
     <link href='/css/app.css' rel='stylesheet'>
 
@@ -16,7 +30,12 @@
 <body>
 
     <header>
-        <h1><img id='logo' src='/images/rps-logo.png' alt='Rock, Paper, Scissors Logo'></h2>
+        <h1>{{ $app->config('app.name') }}
+            <div class="logo"><i class="fas fa-hand-rock"></i>
+                <i class="fas fa-hand-paper"></i>
+                <i class="fas fa-hand-scissors"></i></div>
+        </h1>
+
     </header>
 
     <main>

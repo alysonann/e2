@@ -1,3 +1,141 @@
-#logo {
-    width:300px;
+/*# E2 Project 2 Stylesheet*/
+
+body {
+    margin-left: 10em;
+    font-size: 1.5em;
+}
+
+h1, h2, h3 {
+    color: #710193;
+    font-family: 'Comfortaa', cursive;
+    /* font-family: 'Paytone One', sans-serif;*/
+    margin: 0;
+    padding: .5em .5em .5em 0em;
+}
+
+h1 {
+    padding-bottom: 0;
+    font-size: 3em;
+}
+
+h1 {
+    font-family: 'Monoton', cursive;
+    font-family: 'Bungee Outline', cursive;
+    font-family: 'Bungee Shade', cursive;
+}
+
+li, div {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*Formatting Font Awesome icons*/
+
+.fas, .fab {
+    font-size: 1.3em;
+    padding: .5em;
+}
+
+.fa-hand-rock {
+    color: #008080;
+}
+
+.fa-hand-paper {
+    color: #B91CA8;
+}
+
+.fa-hand-scissors {
+    color: #00b0ed;
+}
+
+input[type="radio"] {
+    margin-left: 3em;
+}
+
+input[type="text"] {
+    margin: 0 0 0 .6em;
+    padding: .6em;
+    height: 30px;
+    width: 150px;
+    font-size: .5em;
+    font-family: 'Indie Flower', cursive;
+    border-radius: 1em;
+    border: 0;
+}
+
+div.choices {
+    display: block;
+}
+
+#instructions {
+    margin-left: 1em;
+    color: #C01F52;
+    font-weight: bold;
+    float: left;
+}
+
+#results {
+    float: left;
+    padding: 1em;
+    line-height: 3em;
+    margin-bottom: 3em;
+}
+
+.routing {
+    content: "";
+    display: block;
+    clear: both;
+    padding: 1em;
+}
+
+form {
+    padding: 1em;
+    font-size: 1.5em;
+    color: #2C6FD6;
+    background-color: #DFE9E3;
+    border-radius: 28px;
+    float: left;
+}
+
+/*Formatting results ul*/
+
+ul {
+    margin: 0;
+}
+
+ul.error {
+    list-style-type: none;
+    color: red;
+    font-weight: bold;
+    font-size: .7em;
+    background-color: yellow;
+    padding: .5em;
+    border-radius: 28px;
+    margin-top: .5em;
+}
+
+/*Formatting button, from CSS Button Generator. See READ.md*/
+
+.myButton {
+    font-family: 'Paytone One', sans-serif;
+    background-color: #aa32d9;
+    font-weight: bold;
+    border-radius: 28px;
+    border: 1px solid #4e6096;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 23px;
+    padding: 16px 31px;
+    margin: 0em 0em 0em 3em;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #283966;
+    text-align: center;
+}
+
+.myButton:hover {
+    background-color: #3dbdbd;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
 }

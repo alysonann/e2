@@ -11,7 +11,7 @@ Game History
     @foreach($rounds as $round)
     <li><a href='/round?id={{ $round['id'] }}'>Round {{ $round['id'] }}: {{$round['time']}}</li>
     @endforeach
-    <ul>
-        <p><a href="/">Play again...</a></p>
+</ul>
+<div class="routing"><a href="/">Play again...</a></div>
 
-        @endsection
+@endsection

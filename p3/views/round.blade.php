@@ -19,13 +19,15 @@
         {{$round['name']}} wins!
         @else
         The computer wins!
+        @endif
     </li>
-    @endif
 
     <li>Time: {{$round['time']}}</li>
 
 </ul>
-<p><a href="/history">Back to game history...</a></p>
-<p><a href="/">Play again...</a></p>
+<div class="routing">
+    <p><a href="/history">Back to game history...</a></p>
+    <p><a href="/">Play again...</a></p>
+</div>
 
 @endsection

@@ -1,16 +1,17 @@
 
-# Project 3: Heads or Tails Demo 
+# Project 3: Rock, Paper, Scissors
 # My own copy from Lecture Videos
 + By: *Alyson Lynch*
 + Production URL: <http://e2p3.alysonann.xyz>
 
 ## Outside resources
-*your list of outside resources go here*
+[W3Schools How TO - Custom Checkbox]
+(https://www.w3schools.com/howto/howto_css_custom_checkbox.asp), with specific [radio button code](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio)
 
 ## Notes for instructor
 *any notes for me to refer to while grading; if none, omit this section*
 
-# Project 3 is based on the e2framework:
+# Note: Project 3 is based on the e2framework
 # e2framework
 
 *e2framework* is a rudimentary PHP framework designed for the course [DGMD E-2 Web Programming for Beginners with PHP](https://hesweb.dev/e2).

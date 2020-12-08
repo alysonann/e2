@@ -72,7 +72,7 @@ class AppCommand extends Command
                     'player_move' => $playerMove,
                     'computer_move' => $computerMove,
                     'result' => $result,
-                    'time' => $faker->dateTimeThisMonth()->format('Y-m-d H:i:s'),
+                    'time' => $faker->dateTimeThisYear()->format('Y-m-d H:i:s'),
                     'name' => $faker->firstName
                 ];
     
