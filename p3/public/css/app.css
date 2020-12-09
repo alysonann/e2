@@ -15,11 +15,10 @@ h1, h2, h3 {
 h1 {
     padding-bottom: 0;
     font-size: 2.5em;
-}
-
-h1 {
     font-family: 'Bungee Shade', cursive;
 }
+
+h1 {}
 
 li, div {
     font-family: 'Source Sans Pro', sans-serif;
@@ -76,7 +75,6 @@ div.choices {
     float: left;
     padding: 1em;
     line-height: 3em;
-    margin-bottom: 3em;
 }
 
 .routing {
@@ -95,6 +93,22 @@ form {
 
 ul {
     margin: 0;
+}
+
+.fa-hand-scissors {
+    color: #00b0ed;
+}
+
+.computerWins {
+    color: purple;
+}
+
+.playerWins {
+    color: green;
+}
+
+.tie {
+    color: sienna;
 }
 
 /* Styling to go with class on errorEexist App method*/

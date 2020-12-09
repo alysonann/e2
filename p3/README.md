@@ -10,6 +10,7 @@
 
 + I used the Google Fonts [Bungee Shade](https://fonts.google.com/specimen/Bungee+Shade), [Comfortaa](https://fonts.google.com/specimen/Comfortaa), [Indie Flower](https://fonts.google.com/specimen/Indie+Flower), and [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro&sidebar.open=true).
 
++ I created a custom favico at [Favicon.io](https://favicon.io/favicon-generator/).
 ## Notes for instructor
 *any notes for me to refer to while grading; if none, omit this section*
 

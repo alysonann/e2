@@ -45,11 +45,11 @@
         <li>{{ $results['name'] }} threw {{ $results['player_move'] }}.</li>
         <li>The computer threw {{ $results['computer_move'] }}.</li>
         @if($results['result'] == "tie")
-        <li>It's a tie!</li>
+        <li class="tie">It's a tie! <i class="far fa-grin-beam-sweat"></i></i></i></li>
         @elseif($results['result']=="win")
-        <li>{{$results['name']}} wins!</li>
+        <li class="playerWins">{{$results['name']}} wins! <i class="far fa-smile"></i></li>
         @else
-        <li>The computer wins!</li>
+        <li class="computerWins">The computer wins! <i class="fas fa-heart-broken"></i></li>
         @endif
     </ul>
 </div>
