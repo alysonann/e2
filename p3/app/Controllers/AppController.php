@@ -36,10 +36,10 @@ class AppController extends Controller
     public function play()
     {
         $this->app->validate([
-            'player'=>'required'
+            'choice'=>'required'
         ]);
         # Get player selection from radio button
-        $playerMove = $this->app->input('player');
+        $playerMove = $this->app->input('choice');
 
         #Get player name from form, or use default value
         $playerName = $this->app->input('playerName');

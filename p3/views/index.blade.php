@@ -21,12 +21,12 @@
         <label for="playerName">Player name:</label>
         <input type="text" name="playerName" id="playerName" value="Player"></div>
     <div class="inputs">
-        <input type="radio" name="player" value="rock" id="rock">
+        <input type="radio" name="choice" value="rock" id="rock">
         <label for="rock"><i class="fas fa-hand-rock"></i>rock</label>
     </div>
-    <div class="inputs"><input type="radio" name="player" value="paper" id="paper">
+    <div class="inputs"><input type="radio" name="choice" value="paper" id="paper">
         <label for="paper"><i class="fas fa-hand-paper"></i>paper</label></div>
-    <div class="inputs"><input type="radio" name="player" value="scissors" id="scissors">
+    <div class="inputs"><input type="radio" name="choice" value="scissors" id="scissors">
         <label for="scissors"><i class="fas fa-hand-scissors"></i>scissors</label></div>
     <button class="myButton" type="submit">THROW</button>
 

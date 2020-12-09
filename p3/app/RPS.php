@@ -6,7 +6,7 @@ class RPS
 {
     public $playerMove;
     public $computerMove;
-    public $result;
+    //public $result;
 
     public function __construct(string $playerMove, string $computerMove)
     {
@@ -16,10 +16,6 @@ class RPS
 
     public function playGame()
     {
-        //  $this->playerMove = $playerMove;
-        //  $this->computerMove = $computerMove;
-        //$this->result = $result;
-
         if ($this->computerMove == $this->playerMove) {
             $result = "tie"; # The game is a tie; no winner
         } elseif (($this->playerMove =='rock' and $this->computerMove == 'scissors') ||
