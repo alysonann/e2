@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 
+use App\RPS; # Class for game play logic; used below and for seed method
+
 class AppController extends Controller
 {
     /**
@@ -36,25 +38,21 @@ class AppController extends Controller
         $this->app->validate([
             'player'=>'required'
         ]);
-
+        # Get player selection from radio button
         $playerMove = $this->app->input('player');
+
+        #Get player name from form, or use default value
         $playerName = $this->app->input('playerName');
 
-
+        # Array of moves for ccmputer
         $choices = ['rock','paper','scissors'];
         $computerMove = $choices[rand(0, 2)];
 
-        if ($computerMove == $playerMove) {
-            $result = "tie"; # The game is a tie; no winner
-        } elseif (($playerMove =='rock' and $computerMove == 'scissors') ||
-                    ($playerMove == 'paper' and $computerMove == 'rock') ||
-                    ($playerMove == 'scissors' and $computerMove == 'paper')) {
-            $result = "win"; # The player wins
-        } elseif (($playerMove== 'rock' and $computerMove =='paper') ||
-                    ($playerMove == 'paper' and $computerMove == 'scissors')||
-                    ($playerMove == 'scissors' and $computerMove == 'rock')) {
-            $result = "loss"; # The player loses
-        }
+        # Create instance of RPS class for game logic
+        $game = new RPS($playerMove, $computerMove);
+
+        # Call RPS method playGame to get win, loss, or tie
+        $result = $game->playGame();
 
         # Save results to the database
         # Set up a round
@@ -65,6 +63,7 @@ class AppController extends Controller
                 'time' =>date('Y-m-d H:i:s'),
                 'name' => $playerName
             ];
+
         # Insert the round
         $this->app->db()->insert('rounds', $data);
 
@@ -75,7 +74,6 @@ class AppController extends Controller
                 'computer_move' => $computerMove,
                 'result' => $result,
                 'name' => $playerName
-
             ]
         ]);
     }

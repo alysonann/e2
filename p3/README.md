@@ -1,12 +1,14 @@
 
-# Project 3: Rock, Paper, Scissors
-# My own copy from Lecture Videos
+# Project 3: Rock, Paper, Scissors with e2framework
 + By: *Alyson Lynch*
 + Production URL: <http://e2p3.alysonann.xyz>
 
 ## Outside resources
-[W3Schools How TO - Custom Checkbox]
-(https://www.w3schools.com/howto/howto_css_custom_checkbox.asp), with specific [radio button code](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio)
++ I used the [CSS Button Generator](https://www.bestcssbuttongenerator.com) to style my submit button.
+
++ I used [rock](https://fontawesome.com/icons/hand-rock?style=solid), [paper](https://fontawesome.com/icons/hand-paper?style=solid), and [scissors](https://fontawesome.com/icons/hand-scissors?style=solid) icons from [Font Awesome](https://fontawesome.com).
+
++ I used the Google Fonts [Bungee Shade](https://fonts.google.com/specimen/Bungee+Shade), [Comfortaa](https://fonts.google.com/specimen/Comfortaa), [Indie Flower](https://fonts.google.com/specimen/Indie+Flower), and [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro&sidebar.open=true).
 
 ## Notes for instructor
 *any notes for me to refer to while grading; if none, omit this section*
@@ -18,5 +20,5 @@
 
 The goal of this software is to provide students an introduction to working with more advanced PHP frameworks such as Laravel and/or Symfony.
 
-+ __Documentation:__ <https://hesweb.dev/e2/notes/php/e2framework/installation>
-+ __Guide:__ <https://hesweb.dev/e2/notes/php/frameworks/intro>
++ [Documentation](https://hesweb.dev/e2/notes/php/e2framework/installation)
++ [Guide](https://hesweb.dev/e2/notes/php/frameworks/intro)

@@ -2,6 +2,8 @@
 
 namespace App\Commands;
 
+use App\RPS; # Class for game play logic; used below in seed method and when playing game
+
 class AppCommand extends Command
 {
     public function fresh()
@@ -13,59 +15,31 @@ class AppCommand extends Command
     public function migrate()
     {
         $this->app->db()->createTable('rounds', [
-            'player_move' => 'varchar(8)',
-            'computer_move' => 'varchar(8)',
-            'result' => 'varchar(4)', # 0, 1, 2 for win, loss, or tie
+            'player_move' => 'varchar(8)', # rock, paper, scissors
+            'computer_move' => 'varchar(8)', # rock, paper, scissors
+            'result' => 'varchar(4)', # win, loss, tie
             'time' => 'timestamp',
             'name' => 'varchar(255)'
     ]);
     }
-    // public function playGame(str $playerMove, str $computerMove)
-    // {
-    //     if ($computerMove == $playerMove) {
-    //         $result = 2; # The game is a tie; no winner
-    //     } elseif (($playerMove =='rock' and $computerMove == 'scissors') ||
-    //         ($playerMove == 'paper' and $computerMove == 'rock') ||
-    //         ($playerMove == 'scissors' and $computerMove == 'paper')) {
-    //         $result = 0; # The player wins
-    //     } elseif (($playerMove== 'rock' and $computerMove =='paper') ||
-    //         ($playerMove == 'paper' and $computerMove == 'scissors')||
-    //         ($playerMove == 'scissors' and $computerMove == 'rock')) {
-    //         $result = 1; # The player loses
-    //     }
-    //     return $result;
-    // }
-
+    
     public function seed()
     {
         {
             # Instantiate a new instance of the Faker\Factory class
             $faker = \Faker\Factory::create();
 
-
-        
-            //$moves = ['heads','tails'];
-            //$randomMove = array_rand($moves);
-
-    
             # Use a loop to create 10 past rounds
             for ($i = 0; $i < 10; $i++) {
                 $choices = ['rock','paper','scissors'];
                 $computerMove = $choices[rand(0, 2)];
                 $playerMove = $choices[rand(0, 2)];
-                //$result = null;
+           
+                # Create instance of RPS class for game logic
+                $game = new RPS($playerMove, $computerMove);
 
-                if ($computerMove == $playerMove) {
-                    $result = "tie"; # The game is a tie; no winner
-                } elseif (($playerMove =='rock' and $computerMove == 'scissors') ||
-                    ($playerMove == 'paper' and $computerMove == 'rock') ||
-                    ($playerMove == 'scissors' and $computerMove == 'paper')) {
-                    $result = "win"; # The player wins
-                } elseif (($playerMove== 'rock' and $computerMove =='paper') ||
-                    ($playerMove == 'paper' and $computerMove == 'scissors')||
-                    ($playerMove == 'scissors' and $computerMove == 'rock')) {
-                    $result = "loss"; # The player loses
-                }
+                # Call RPS method playGame to get win, loss, or tie
+                $result = $game->playGame();
 
                 # Set up a round
                 $round = [
@@ -75,7 +49,7 @@ class AppCommand extends Command
                     'time' => $faker->dateTimeThisYear()->format('Y-m-d H:i:s'),
                     'name' => $faker->firstName
                 ];
-    
+
                 # Insert the round
                 $this->app->db()->insert('rounds', $round);
             }
