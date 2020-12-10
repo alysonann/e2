@@ -41,12 +41,11 @@ class AppController extends Controller
         # Get player selection from radio button
         $playerMove = $this->app->input('choice');
 
+        # Call RPS method to generate random move
+        $computerMove = RPS::getMove();
+
         #Get player name from form, or use default value
         $playerName = $this->app->input('playerName');
-
-        # Array of moves for ccmputer
-        $choices = ['rock','paper','scissors'];
-        $computerMove = $choices[rand(0, 2)];
 
         # Create instance of RPS class for game logic
         $game = new RPS($playerMove, $computerMove);

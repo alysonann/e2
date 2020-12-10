@@ -31,10 +31,11 @@ class AppCommand extends Command
 
             # Use a loop to create 10 past rounds
             for ($i = 0; $i < 10; $i++) {
-                $choices = ['rock','paper','scissors'];
-                $computerMove = $choices[rand(0, 2)];
-                $playerMove = $choices[rand(0, 2)];
-           
+
+                #Call RPS method to generate random move for both computer and player
+                $computerMove = RPS::getMove();
+                $playerMove = RPS::getMove();
+                
                 # Create instance of RPS class for game logic
                 $game = new RPS($playerMove, $computerMove);
 

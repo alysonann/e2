@@ -29,4 +29,11 @@ class RPS
         }
         return $result;
     }
+
+    public static function getMove()
+    {
+        $choices = ['rock','paper','scissors'];
+        $randomMove = $choices[rand(0, 2)];
+        return $randomMove;
+    }
 }

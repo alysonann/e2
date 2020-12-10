@@ -11,7 +11,7 @@
 <ul>
 
     <li>{{$round['name']}}'s move: {{ $round['player_move'] }}.</li>
-    <li>Computer's move: {{ $round['computer_move'] }}.</li>
+    <li>The computer's move: {{ $round['computer_move'] }}.</li>
     <li>Result:
         @if($round['result'] == "tie")
         It's a tie!

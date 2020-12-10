@@ -2,7 +2,7 @@
 
 body {
     margin-left: 10em;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 h1, h2, h3 {
@@ -14,11 +14,14 @@ h1, h2, h3 {
 
 h1 {
     padding-bottom: 0;
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-family: 'Bungee Shade', cursive;
 }
 
-h1 {}
+header div {
+    font-size: 1.3em;
+    color: #710193;
+}
 
 li, div {
     font-family: 'Source Sans Pro', sans-serif;
@@ -27,8 +30,15 @@ li, div {
 /*Formatting Font Awesome icons*/
 
 .fas, .fab {
-    font-size: 1.3em;
-    padding: .5em;
+    font-size: 1.5em;
+    padding: .1em .3em .4em .2em;
+}
+
+/* FontAwesome icons just in header on master template*/
+
+header .fas, .fab {
+    font-size: 2em;
+    padding: .5em .5em 0 .5em;
 }
 
 .fa-hand-rock {
@@ -52,7 +62,6 @@ input[type="text"] {
     padding: .6em;
     height: 30px;
     width: 150px;
-    font-size: .5em;
     font-family: 'Indie Flower', cursive;
     font-size: .8em;
     border-radius: 1em;
@@ -64,17 +73,20 @@ div.choices {
     display: block;
 }
 
-#instructions {
-    margin-left: 1em;
+#directionMessage {
     color: #C01F52;
     font-weight: bold;
     float: left;
 }
 
-#results {
+#resultsArea {
     float: left;
-    padding: 1em;
+}
+
+#results {
+    margin-left: 1em;
     line-height: 3em;
+    font-size: 1.5em;
 }
 
 .routing {
@@ -83,8 +95,9 @@ div.choices {
 }
 
 form {
-    padding: 1em;
-    font-size: 1.5em;
+    padding: .5em;
+    margin-right: 1em;
+    font-size: 1.3em;
     color: #2C6FD6;
     background-color: #DFE9E3;
     border-radius: 28px;
@@ -93,10 +106,6 @@ form {
 
 ul {
     margin: 0;
-}
-
-.fa-hand-scissors {
-    color: #00b0ed;
 }
 
 .computerWins {
@@ -118,10 +127,11 @@ ul.error {
     color: red;
     font-weight: bold;
     font-size: .7em;
-    background-color: yellow;
+    background-color: #fff995;
     padding: .5em;
     border-radius: 28px;
     margin-top: .5em;
+    text-align: center;
 }
 
 /*Formatting button, from CSS Button Generator. See READ.md*/

@@ -23,11 +23,13 @@
 <body>
 
     <header>
-        <h1>{{ $app->config('app.name') }}
-            <div class="logo"><i class="fas fa-hand-rock"></i>
-                <i class="fas fa-hand-paper"></i>
-                <i class="fas fa-hand-scissors"></i></div>
-        </h1>
+        <h1>{{ $app->config('app.name') }}</h1>
+        <div>
+            <i class="fas fa-hand-rock"></i>
+            <i class="fas fa-hand-paper"></i>
+            <i class="fas fa-hand-scissors"></i>
+            Play against the computer! (DGMD E-2 by Alyson Lynch)</div>
+
 
     </header>
 

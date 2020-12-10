@@ -6,20 +6,21 @@
 ## Outside resources
 + I used the [CSS Button Generator](https://www.bestcssbuttongenerator.com) to style my submit button.
 
-+ I used [rock](https://fontawesome.com/icons/hand-rock?style=solid), [paper](https://fontawesome.com/icons/hand-paper?style=solid), and [scissors](https://fontawesome.com/icons/hand-scissors?style=solid) icons from [Font Awesome](https://fontawesome.com).
++ I the following icons from [Font Awesome](https://fontawesome.com): 
+- [hand-rock](https://fontawesome.com/icons/hand-rock?style=solid)
+- [hand-paper](https://fontawesome.com/icons/hand-paper?style=solid), 
+- [hand-scissors](https://fontawesome.com/icons/hand-scissors?style=solid)
+- [grin-beam-sweat](https://fontawesome.com/icons/grin-beam-sweat?style=regular)
+- [smile](https://fontawesome.com/icons/smile?style=regular)
+- [heart-broken] (https://fontawesome.com/icons/heart-broken?style=solid)
 
 + I used the Google Fonts [Bungee Shade](https://fonts.google.com/specimen/Bungee+Shade), [Comfortaa](https://fonts.google.com/specimen/Comfortaa), [Indie Flower](https://fonts.google.com/specimen/Indie+Flower), and [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro&sidebar.open=true).
 
-+ I created a custom favico at [Favicon.io](https://favicon.io/favicon-generator/).
-## Notes for instructor
-*any notes for me to refer to while grading; if none, omit this section*
++ I created a custom favicon at [Favicon.io](https://favicon.io/favicon-generator/).
+
++ I used this [Object Oriented PHP for Beginners Tutorial](https://www.killerphp.com/tutorials/object-oriented-php/) for a bit of a refresher along with the notes when creating my separate class.
 
 # Note: Project 3 is based on the e2framework
 # e2framework
-
-*e2framework* is a rudimentary PHP framework designed for the course [DGMD E-2 Web Programming for Beginners with PHP](https://hesweb.dev/e2).
-
-The goal of this software is to provide students an introduction to working with more advanced PHP frameworks such as Laravel and/or Symfony.
-
 + [Documentation](https://hesweb.dev/e2/notes/php/e2framework/installation)
 + [Guide](https://hesweb.dev/e2/notes/php/frameworks/intro)

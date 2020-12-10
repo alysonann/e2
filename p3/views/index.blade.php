@@ -5,8 +5,6 @@
 @endsection
 
 @section('content')
-<div>Play against the computer! (DGMD E-2 by Alyson Lynch) </div>
-
 
 <h2>Instructions</h2>
 <ul>
@@ -39,22 +37,24 @@
     @endif
 </form>
 @if($results)
-<div id="results">
-    <h3>Results</h3>
-    <ul>
-        <li>{{ $results['name'] }} threw {{ $results['player_move'] }}.</li>
-        <li>The computer threw {{ $results['computer_move'] }}.</li>
-        @if($results['result'] == "tie")
-        <li class="tie">It's a tie! <i class="far fa-grin-beam-sweat"></i></i></i></li>
-        @elseif($results['result']=="win")
-        <li class="playerWins">{{$results['name']}} wins! <i class="far fa-smile"></i></li>
-        @else
-        <li class="computerWins">The computer wins! <i class="fas fa-heart-broken"></i></li>
-        @endif
-    </ul>
+<div id="resultsArea">
+    <h2>Results</h2>
+    <div id="results">
+        <ul>
+            <li>{{ $results['name'] }} threw {{ $results['player_move'] }}.</li>
+            <li>The computer threw {{ $results['computer_move'] }}.</li>
+            @if($results['result'] == "tie")
+            <li class="tie">It's a tie! <i class="far fa-grin-beam-sweat"></i></i></i></li>
+            @elseif($results['result']=="win")
+            <li class="playerWins">{{$results['name']}} wins! <i class="far fa-smile"></i></li>
+            @else
+            <li class="computerWins">The computer wins! <i class="fas fa-heart-broken"></i></li>
+            @endif
+        </ul>
+    </div>
 </div>
-
-@else <h3 id="instructions">Make a selection and click THROW!</h3>
+@else
+<h2 id="directionMessage">Make a selection and click THROW!</h2>
 @endif
 <div class="routing"><a href="/history">See game history...</a></div>
 
