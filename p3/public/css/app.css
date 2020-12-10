@@ -1,7 +1,7 @@
-/*# E2 Project 3 Stylesheet*/
+/*# E2 Project 3 Rock, Paper, Scissors Stylesheet*/
 
 body {
-    margin-left: 10em;
+    margin-left: 8em;
     font-size: 1.2em;
 }
 
@@ -19,7 +19,7 @@ h1 {
 }
 
 header div {
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: #710193;
 }
 
@@ -34,10 +34,9 @@ li, div {
     padding: .1em .3em .4em .2em;
 }
 
-/* FontAwesome icons just in header on master template*/
+/* Formatting FontAwesome icons just in header on master template*/
 
 header .fas, .fab {
-    font-size: 2em;
     padding: .5em .5em 0 .5em;
 }
 
@@ -85,7 +84,7 @@ div.choices {
 
 #results {
     margin-left: 1em;
-    line-height: 3em;
+    line-height: 2em;
     font-size: 1.5em;
 }
 
@@ -107,6 +106,8 @@ form {
 ul {
     margin: 0;
 }
+
+/* Classes to color results */
 
 .computerWins {
     color: purple;
@@ -144,7 +145,7 @@ ul.error {
     cursor: pointer;
     color: #ffffff;
     font-size: 23px;
-    padding: 16px 31px;
+    padding: .5em .8em;
     margin: 0em 0em 0em 3em;
     text-decoration: none;
     text-shadow: 0px 1px 0px #283966;

@@ -10,10 +10,8 @@
     <script src="https://kit.fontawesome.com/9779d43f9a.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Comfortaa:wght@300;700&family=Indie+Flower&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+
 
     <link href='/css/app.css' rel='stylesheet'>
 
@@ -29,8 +27,6 @@
             <i class="fas fa-hand-paper"></i>
             <i class="fas fa-hand-scissors"></i>
             Play against the computer! (DGMD E-2 by Alyson Lynch)</div>
-
-
     </header>
 
     <main>

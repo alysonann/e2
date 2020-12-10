@@ -28,16 +28,26 @@ class AppController extends Controller
     {
         $id = $this->app->param('id');
         $round = $this->app->db()->findById('rounds', $id);
-        return $this->app->view('round', [
+
+        # If a user tries to view a round that doesn't exist, direct to error page
+        if (is_null($round)) {
+            return $this->app->view('errors.404');
+        }
+        # Otherwise display round view
+        else {
+            return $this->app->view('round', [
             'round'=>$round
         ]);
+        }
     }
 
     public function play()
     {
+        # Require user to select a move
         $this->app->validate([
             'choice'=>'required'
         ]);
+
         # Get player selection from radio button
         $playerMove = $this->app->input('choice');
 
@@ -53,9 +63,8 @@ class AppController extends Controller
         # Call RPS method playGame to get win, loss, or tie
         $result = $game->playGame();
 
-        # Save results to the database
-        # Set up a round
-        $data = [
+        # Save results to the database and set up a round
+        $round = [
                 'player_move' => $playerMove,
                 'computer_move' => $computerMove,
                 'result' => $result,
@@ -64,7 +73,7 @@ class AppController extends Controller
             ];
 
         # Insert the round
-        $this->app->db()->insert('rounds', $data);
+        $this->app->db()->insert('rounds', $round);
 
         # Redirect the user back to the home page with the form to play again
         $this->app->redirect('/', [
