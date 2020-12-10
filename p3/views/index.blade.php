@@ -1,7 +1,7 @@
 @extends('templates.master')
 
 @section('title')
-
+Rock, Paper, Scissors for E2
 @endsection
 
 @section('content')

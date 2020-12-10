@@ -1,7 +1,7 @@
 @extends('templates.master')
 
 @section('title')
-<h2>Round Details</h2>
+Round Details
 
 @endsection
 
